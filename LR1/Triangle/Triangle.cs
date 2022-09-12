@@ -19,19 +19,11 @@ namespace Triangle
             return a == b && b == c;
         }
 
-        static void ParseArgs(ref double a, ref double b, ref double c, string[] args)
-        {
-            a = Convert.ToDouble(args[0]);
-            b = Convert.ToDouble(args[1]);
-            c = Convert.ToDouble(args[2]);
-
-        }
-
         static bool CheckArgs(string[] args)
         {
             if (args.Length != 3)
             {
-                Console.WriteLine("Неизвестная ошибка");
+                Console.WriteLine("неизвестная ошибка");
                 return false;
             }
 
@@ -42,18 +34,18 @@ namespace Triangle
         {
             if (IsNotATriangle(a, b, c))
             {
-                Console.WriteLine("Не треугольник");
+                Console.WriteLine("не треугольник");
             }
             else if (IsEquilateralTriangle(a, b, c))
             {
-                Console.WriteLine("Равносторонний");
+                Console.WriteLine("равносторонний");
             }
             else if (IsIsoscelesTriangle(a, b, c))
             {
-                Console.WriteLine("Равнобедренный");
+                Console.WriteLine("равнобедренный");
             }
             else
-                Console.WriteLine("Обычный");
+                Console.WriteLine("обычный");
         }
 
         static void Main(string[] args)
@@ -65,17 +57,16 @@ namespace Triangle
 
             try
             {
-                double a = 0;
-                double b = 0;
-                double c = 0;
-                ParseArgs(ref a, ref  b, ref c, args);
+                double a = Convert.ToDouble(args[0]);
+                double b = Convert.ToDouble(args[1]);
+                double c = Convert.ToDouble(args[2]);
 
                 CheckTriangle(a, b, c);
             }
             catch (Exception)
             {
 
-                Console.WriteLine("Неизвестная ошибка");
+                Console.WriteLine("неизвестная ошибка");
             }
         }
     }
