@@ -4,7 +4,7 @@ using System.IO;
 
 namespace TriangleTest
 {
-    public class Program
+    public class TriangleTests
     {
         private static readonly string pathToExecutableFile = @"D:\Учёба\PS_3\PS_3_1\ТиОПО\LR1\Triangle\bin\Debug\net6.0\";
         private static readonly string pathToCheckResults = @"..\..\..\ResultOfCheck.txt";
